@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain Management Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Domain Management Dashboard</h1>
+        <div>
+            <h2>Manage Custom Domains</h2>
+            <form id="domainForm">
+                <input type="text" id="domainInput" placeholder="Enter domain name" required>
+                <button type="submit" class="button">Add Domain</button>
+            </form>
+        </div>
+        <div>
+            <h2>Linked Servers</h2>
+            <table id="serversTable">
+                <thead>
+                    <tr>
+                        <th>Server Name</th>
+                        <th>Link Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Server records will go here -->
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h2>Domain Status</h2>
+            <table id="domainStatusTable">
+                <thead>
+                    <tr>
+                        <th>Domain</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Domain status records will go here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        document.getElementById('domainForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const domain = document.getElementById('domainInput').value;
+            // Logic to add domain goes here
+            alert('Domain ' + domain + ' added!');
+            document.getElementById('domainInput').value = '';
+        });
+    </script>
+</body>
+</html>
