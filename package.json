@@ -1,0 +1,1 @@
+{"name": "knightnodes","version": "1.0.0","description": "A project for managing files and server hosting.","main": "index.js","scripts": {"test": "echo 'Error: no test specified' && exit 1"},"dependencies": {"express": "^4.17.1","axios": "^0.21.1","multer": "^1.4.2","fs-extra": "^10.0.0","archiver": "^5.3.0","extract-zip": "^2.0.1"}}
